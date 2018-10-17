@@ -1,5 +1,15 @@
 # Arbidopsis_smallRNA_loci
-Additional material for small RNA loci project
+
+## Publication
+
+Thomas J. Hardcastle, Sebastian Y. Müller & David C. Baulcombe *Scientific Reports* volume 8, Article number: 6338 (**2018**)
+https://www.nature.com/articles/s41598-018-24515-8
+
+## Public data
+
+https://www.ebi.ac.uk/ena/data/view/PRJEB22276
+
+## Additional material for small RNA loci project
 
 GFF file contains all annotation used to class sRNA-loci in Arabidopsis.
 The 9 cluster described in the paper are saved as *cluster*.
