@@ -1,0 +1,99 @@
+Tissue type	Plant/Expt Type	Library	Owner	Replicate group
+Arial	AGO4 IP	SL26	Ericka	1
+Arial	WT	SL2013	Donna	2
+Arial	WT	SL2014	Donna	2
+Floral	AGO1 IP	SL34	Susi	3
+Floral	AGO1 IP	SL48	Susi	3
+Floral	ago4-3	SL25_1	Ericka	4
+Floral	ago4-3	SL25_2	Ericka	4
+Floral	ago4-3	SL25_3	Ericka	4
+Floral	AGO4 IP	SL32	Ericka	5
+Floral	AGO4p:AGO4 IP	SL234_B	Ericka	6
+Floral	AGO4p:AGO4 IP	SL234_B_2	Ericka	6
+Floral	AGO4p:AGO6 IP	SL234_C	Ericka	7
+Floral	AGO4p:AGO6 IP	SL234_C_2	Ericka	7
+Floral	AGO4p:AGO9 IP	SL234_F	Ericka	8
+Floral	AGO5 IP	SL103_2	Paola	9
+Floral	AGO6 IP	SL10	Ericka	10
+Floral	JAM51	SL41	Iain Searle	11
+Floral	JAP3	SL40	Iain Searle	12
+Floral	nrpd1a	SL168	Becky Mosher	13
+Floral	+/nrpd1a	SL170	Becky Mosher	14
+Floral	nrpd1a/+	SL169	Becky Mosher	15
+Floral	nuclear	SL383_D	Becky Mosher	16
+Floral	nuclear	SL383_E	Becky Mosher	16
+Floral	WT	SL167	Becky Mosher	17
+Floral	WT	SL362	Antonis	18
+Floral	WT	SL363	Antonis	18
+Floral	WT	SL382_B	Becky Mosher	19
+Floral	WT	SL382_G	Becky Mosher	19
+Floral	AGO1 IP	SL77	Shiva	20
+Floral	WT	SL9	Ericka	21
+Floral	WT	SL23_1	Ericka	21
+Floral	WT	SL23_2	Ericka	21
+Floral	WT	SL5	Ericka	21
+Floral	WT	SL334	Antonis	22
+Floral	WT	SL335	Antonis	22
+Floral	WT	SL99	Iain Searle	23
+Floral	JAM39	SL100	Iain Searle	24
+Floral/Silique	AGO1 IP	SL35	Susi	25
+Floral/Silique	AGO1 IP	SL49	Susi	25
+Floral/Silique	AGO9 IP	SL11	Ericka	26
+Floral/Silique	AGO9 IP	SL12	Ericka	26
+Leaf	AGO1 IP	SL44_1	Natasha	27
+Leaf	AGO1 IP	SL50	Natasha	27
+Leaf	dcl4-2; AGO1 IP	SL47	Natasha	28
+Leaf	nuclear	SL381_C	Becky Mosher	29
+Leaf	nuclear	SL383_F	Becky Mosher	29
+Leaf	rdr6-15; AGO1 IP	SL46	Natasha	30
+Leaf	rdr6-15; AGO1 IP	SL52	Natasha	30
+Leaf	tex1-1; AGO1 IP	SL45	Natasha	31
+Leaf	tex1-1; AGO1 IP	SL51	Natasha	31
+Leaf	WT	SL161	Becky Mosher	32
+Leaf	WT	SL381_A	Becky Mosher	33
+Leaf	WT	SL382_H	Becky Mosher	33
+Root	Col/Col	SL258	Attila	34
+Root	Col/Col	SL259	Attila	34
+Root	dclTriple/dclTriple	SL236	Attila	35
+Root	dclTriple/dclTriple	SL260	Attila	35
+Seedling	WT	SL115	Shiva	36
+Seedling	JAM39	SL97	Iain Searle	37
+Seedling	JAM94	SL98	Iain Searle	37
+Shoot	Col/Col	SL302	Attila	38
+Shoot	Col/Col	SL303	Attila	38
+Shoot	dclTriple/dclTriple	SL300	Attila	39
+Shoot	dclTriple/dclTriple	SL301	Attila	39
+Silique	WT	SL90_1	Becky Mosher	40
+Floral/Silique	WT	SL4_1	Ericka	41
+Floral/Silique	WT	SL4_2	Ericka	41
+Unknown	AGO2 IP	SL28_1	Susi	42
+Unknown	AGO2 IP	SL28_2	Susi	42
+Unknown	AGO2 IP	SL28_3	Susi	42
+Unknown	AGO2 IP	SL28_4	Susi	42
+Unknown	AGO2 IP	SL29_1	Susi	42
+Unknown	AGO2 IP	SL29_2	Susi	42
+Unknown/leaf?	AGO1 IP + mock	SL206	Susi	43
+Unknown/leaf?	AGO1 IP + TCV	SL205	Susi	44
+Unknown/leaf?	AGO2 IP + mock	SL208	Susi	45
+Unknown/leaf?	AGO2 IP + TCV	SL207	Susi	46
+Floral	WT	SL30_1	Susi	47
+Floral	WT	SL30_2	Susi	47
+Floral	WT	SL30_4	Susi	47
+Floral	WT	SL31	Susi	47
+Seedling	WT	SL68	Natasha	48
+Seedling	WT	SL69	Natasha	48
+Seedling	WT	SL96	Iain Searle	49
+Arial	WT	NA	Garcia	50
+Arial	WT	NA	Garcia	50
+Arial	WT	NA	Garcia	50
+Arial	dpi10	NA	Garcia	51
+Arial	dpi10	NA	Garcia	51
+Arial	dpi10	NA	Garcia	51
+Inflorescence	WT	NA	Lee	52
+Inflorescence	WT	NA	Lee	52
+Inflorescence	WT	NA	Lee	52
+Inflorescence	WT	NA	Montgomery	53
+Inflorescence	WT	NA	Montgomery	53
+Inflorescence	WT	NA	Montgomery	53
+Shoot	saltstress	NA	Zhang	54
+Shoot	saltstress	NA	Zhang	54
