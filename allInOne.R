@@ -3,16 +3,10 @@ library(segmentSeq)
 
 cl <- makeCluster(24)
 
-setwd("~/Code/segmentMap_III")
-
 chrlens <- c(30427671, 19698289, 23459830, 18585056, 26975502)
 
 samples <- read.delim("Arabidopsis_samples.txt", as.is = TRUE)
 
-samples$files[samples$Library == "SL12"] <- "/data/pipeline/prod/SL12/SL12.ID15_FC5372.lane3.reads.filtered_7_5_2008.v_Arabidopsis_thaliana_genome-tair9.patman.gff2"
-samples$files[samples$Library == "SL9"] <- "/data/pipeline/prod/SL9/SL9.ID15_FC5372.lane1.reads.filtered_7_5_2008.v_Arabidopsis_thaliana_genome-tair9.patman.gff2"
-samples$files[samples$Library == "SL11"] <- "/data/pipeline/prod/SL11/SL11.ID15_FC5372.lane2.reads.filtered_7_5_2008.v_Arabidopsis_thaliana_genome-tair9.patman.gff2"
-samples$files[samples$Library == "SL4_1"] <- "/data/pipeline/prod/SL4/SL4.FC5365.combined.reads.filtered_7_5_2008.v_Arabidopsis_thaliana_genome-tair9.patman.gff2"
 
 mirFiles <- gsub("genome-tair9.patman.gff2", "mirbase-hairpin.patman.gff2", samples$files)
 mirFiles <- mirFiles[grep("mirbase-hairpin.patman.gff2", mirFiles)]
@@ -42,11 +36,11 @@ samples$Library[is.na(samples$Library)] <- gsub("_nonredundant.aligned.*", "", g
 
 for(ii in 1:length(rawFiles))
   if(!file.exists(paste("~/Code/segmentMap_II/alignJunk/", samples$Library[ii], "_scored_patman.out", sep = "")))
-    system(paste("perl /scripts/run_standard_patman.pl -D /home/tjh48/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P ", rawFiles[ii], " -o ~/Code/segmentMap_II/alignJunk -n ", samples$Library[ii], sep = ""))
+    system(paste("perl /scripts/run_standard_patman.pl -D ~/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P ", rawFiles[ii], " -o ~/Code/segmentMap_II/alignJunk -n ", samples$Library[ii], sep = ""))
 
-system("perl /scripts/run_standard_patman.pl -D /home/tjh48/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P /data/pipeline/prod/SL9/SL9.ID15_FC5372.lane1.reads.filtered_7_5_2008.fasta -o alignJunk -n SL9")
-system("perl /scripts/run_standard_patman.pl -D /home/tjh48/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P /data/pipeline/prod/SL11/SL11.ID15_FC5372.lane2.reads.filtered_7_5_2008.fasta -o alignJunk -n SL11")
-system("perl /scripts/run_standard_patman.pl -D /home/tjh48/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P /data/pipeline/prod/SL12/SL12.ID15_FC5372.lane3.reads.filtered_7_5_2008.fasta -o alignJunk -n SL12")
+system("perl /scripts/run_standard_patman.pl -D ~/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P /data/pipeline/prod/SL9/SL9.ID15_FC5372.lane1.reads.filtered_7_5_2008.fasta -o alignJunk -n SL9")
+system("perl /scripts/run_standard_patman.pl -D ~/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P /data/pipeline/prod/SL11/SL11.ID15_FC5372.lane2.reads.filtered_7_5_2008.fasta -o alignJunk -n SL11")
+system("perl /scripts/run_standard_patman.pl -D ~/Code/arabidopsisFilter/arabidopsisTAIR9_filterJunk.fasta -P /data/pipeline/prod/SL12/SL12.ID15_FC5372.lane3.reads.filtered_7_5_2008.fasta -o alignJunk -n SL12")
 
 
 junkTags <- unique(unlist(lapply(dir("~/Code/segmentMap_II/alignJunk", pattern = "scored_patman.out", full.names = TRUE), function(x) unique(read.delim(x, header = FALSE, as.is = TRUE)[,2]))))
@@ -209,7 +203,7 @@ png("locNum_libsizes.png", height = 600, width = 600)
 plot(y = locNums$numberOfLoci, x = locNums$libsizes, xlab = "Library sizes", ylab = "Number of loci")
 dev.off()
 
-annotation <- read.delim("/data/public_data/arabidopsis/TAIR_10/TAIR10_GFF3_genes_transposons.gff", header = FALSE, as.is = TRUE)
+annotation <- read.delim("TAIR10_GFF3_genes_transposons.gff", header = FALSE, as.is = TRUE)
 annotation[annotation[,7] == ".",7] <- "*"
 annotationGR <- GRanges(seqnames = gsub("Chr", "", annotation[,1]), IRanges(start = annotation[,4], end = annotation[,5]), strand = annotation[,7])
 
@@ -270,9 +264,3 @@ bb <- lapply(unique(annotation[,3]), function(annType) {
 
 names(bb) <- unique(annotation[,3])
 
-x11()
-pdf("Sebastian_funny_loci.pdf", height = 20, width = 30)
-plotGenome(aD, classSegLike, chr = "1", limits = c(4987695, 5009703) + c(-500, 500))
-plotGenome(aD, classSegLike, chr = "1", limits = c(4987695, 5009703) + c(-500, 500))
-plotGenome(aD, classSegLike, chr = "1", limits = c(5356765,5357154) + c(-500, 500))
-dev.off()
